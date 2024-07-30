@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
+from django_project.cast_member_app.views import CastMemberViewSet
 from django_project.category_app.views import CategoryViewSet
 from django_project.genre_app.views import GenreViewSet
 
@@ -25,6 +26,7 @@ from django_project.genre_app.views import GenreViewSet
 router = DefaultRouter()
 router.register(r"api/categories", viewset=CategoryViewSet, basename="category")
 router.register(r"api/genres", viewset=GenreViewSet, basename="genre")
+router.register(r"api/cast_members", CastMemberViewSet, basename="cast_member")
 urlpatterns = [
     path('admin/', admin.site.urls),
 ] + router.urls

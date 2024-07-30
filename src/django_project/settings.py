@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_project.category_app',
     'django_project.genre_app',
+    'django_project.cast_member_app',
      'rest_framework',
 ]
 
